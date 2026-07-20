@@ -45,13 +45,16 @@ class ModelLoader:
         if self.model is None:
             logger.info("Loading DistilBERT model...")
             try:
+                from transformers import DistilBertConfig
+                
                 if self.label_encoder is None:
                     self.load_label_encoder()
                 
-                self.model = DistilBertForSequenceClassification.from_pretrained(
+                config = DistilBertConfig.from_pretrained(
                     "distilbert-base-uncased",
                     num_labels=self.num_classes
                 )
+                self.model = DistilBertForSequenceClassification(config)
                 state_dict = torch.load(settings.MODEL_PATH, map_location=self.device)
                 
                 if "model_state_dict" in state_dict:
