@@ -20,10 +20,8 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Models & Data
-*.pt
 *.pth
 *.bin
-*.pkl
 *.h5
 *.onnx
 *.csv
