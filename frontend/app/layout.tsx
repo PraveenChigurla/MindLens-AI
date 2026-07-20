@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <div className="flex min-h-screen relative">
           <Sidebar />
           <div className="flex-1 md:ml-64 flex flex-col min-h-screen relative z-10">

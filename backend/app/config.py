@@ -8,15 +8,15 @@ class Settings:
     API_VERSION: str = "1.0.0"
     
     # Metrics
-    TRAIN_ACC: float = float(os.getenv("TRAIN_ACC", "0.98"))
-    VAL_ACC: float = float(os.getenv("VAL_ACC", "0.95"))
-    TEST_ACC: float = float(os.getenv("TEST_ACC", "0.94"))
-    MACRO_PRECISION: float = float(os.getenv("MACRO_PRECISION", "0.93"))
-    MACRO_RECALL: float = float(os.getenv("MACRO_RECALL", "0.92"))
-    MACRO_F1: float = float(os.getenv("MACRO_F1", "0.925"))
-    ROC_AUC: float = float(os.getenv("ROC_AUC", "0.99"))
-    EPOCHS: int = int(os.getenv("EPOCHS", "3"))
-    MAX_SEQ_LENGTH: int = int(os.getenv("MAX_SEQ_LENGTH", "384"))
+    TRAIN_ACC: float = float(os.getenv("TRAIN_ACC", "0.9167"))
+    VAL_ACC: float = float(os.getenv("VAL_ACC", "0.8423"))
+    TEST_ACC: float = float(os.getenv("TEST_ACC", "0.8280"))
+    MACRO_PRECISION: float = float(os.getenv("MACRO_PRECISION", "0.8518"))
+    MACRO_RECALL: float = float(os.getenv("MACRO_RECALL", "0.8143"))
+    MACRO_F1: float = float(os.getenv("MACRO_F1", "0.8287"))
+    ROC_AUC: float = float(os.getenv("ROC_AUC", "0.9312"))
+    EPOCHS: int = int(os.getenv("EPOCHS", "5"))
+    MAX_SEQ_LENGTH: int = int(os.getenv("MAX_SEQ_LENGTH", "256"))
     MODEL_NAME: str = os.getenv("MODEL_NAME", "DistilBERT")
     
     TRAINING_DATE: str = os.getenv("TRAINING_DATE", "2023-10-25")

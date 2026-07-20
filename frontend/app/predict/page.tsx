@@ -98,13 +98,34 @@ export default function SinglePrediction() {
                   <span>{wordCount} words</span>
                   <span>~{readingTime} min read</span>
                 </div>
-                <div className="flex gap-2">
-                  <button onClick={() => setText("I feel hopeless and don't enjoy anything anymore. Everything feels heavy and exhausting.")} className="hover:text-primary transition-colors flex items-center gap-1">
-                    <Copy className="size-3" /> Example
-                  </button>
+                <div>
                   <button onClick={() => setText("")} className="hover:text-destructive transition-colors flex items-center gap-1">
-                    <Eraser className="size-3" /> Clear
+                    <Eraser className="size-3" /> Clear Text
                   </button>
+                </div>
+              </div>
+
+              <div className="mt-5 pt-4 border-t border-border/40">
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-2 font-medium">Load Sample for Class:</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "Normal", text: "I had a great day today! Went for a walk with friends and enjoyed the nice weather." },
+                    { label: "Depression", text: "I feel completely empty and hopeless. I don't enjoy the things I used to, and getting out of bed feels impossible." },
+                    { label: "Anxiety", text: "My heart is constantly racing and my chest is tight. I can't stop overthinking every little thing that might go wrong." },
+                    { label: "Stress", text: "I am so overwhelmed with all these deadlines and responsibilities. I haven't slept properly in days trying to keep up." },
+                    { label: "Suicidal", text: "I just can't take this pain anymore. I want it all to end and I don't see any other way out." },
+                    { label: "Bipolar", text: "Last week I felt invincible and didn't sleep for three days working on projects, but now I crashed and feel utterly worthless." },
+                    { label: "Personality disorder", text: "My relationships are so intense and unstable. I constantly fear being abandoned, and I feel completely empty inside." }
+                  ].map((sample) => (
+                    <Badge 
+                      key={sample.label} 
+                      variant="outline" 
+                      className="cursor-pointer hover:bg-primary/20 hover:text-primary transition-colors border-border/50 bg-background/50"
+                      onClick={() => setText(sample.text)}
+                    >
+                      {sample.label}
+                    </Badge>
+                  ))}
                 </div>
               </div>
               
