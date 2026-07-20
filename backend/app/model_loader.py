@@ -1,6 +1,7 @@
 import torch
 import joblib
 import logging
+import os
 from transformers import AutoTokenizer, DistilBertForSequenceClassification
 from app.config import settings
 
@@ -45,23 +46,18 @@ class ModelLoader:
         if self.model is None:
             logger.info("Loading DistilBERT model...")
             try:
-                from transformers import DistilBertConfig
-                
                 if self.label_encoder is None:
                     self.load_label_encoder()
                 
-                config = DistilBertConfig.from_pretrained(
-                    "distilbert-base-uncased",
-                    num_labels=self.num_classes
-                )
-                self.model = DistilBertForSequenceClassification(config)
-                state_dict = torch.load(settings.MODEL_PATH, map_location=self.device)
-                
-                if "model_state_dict" in state_dict:
-                    self.model.load_state_dict(state_dict["model_state_dict"])
-                else:
-                    self.model.load_state_dict(state_dict)
+                # Load natively from the local huggingface format directory
+                hf_model_path = "models/hf_model" if not settings.MODEL_PATH.startswith("/") else settings.MODEL_PATH.replace("distilbert_model.pt", "hf_model")
+                if not os.path.exists(hf_model_path) and os.path.exists("backend/models/hf_model"):
+                    hf_model_path = "backend/models/hf_model"
                     
+                self.model = DistilBertForSequenceClassification.from_pretrained(
+                    hf_model_path,
+                    local_files_only=True
+                )
                 self.model.to(self.device)
                 self.model.eval()
                 
