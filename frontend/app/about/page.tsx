@@ -30,7 +30,7 @@ export default function About() {
 
         <div className="space-y-6">
           <Card className="glass flex flex-col items-center justify-center text-center p-6 border-primary/20 hover:border-primary/50 transition-colors">
-            <div className="size-20 rounded-full bg-primary/10 border-2 border-primary/50 flex items-center justify-center mb-4 overflow-hidden relative shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+            <div className="size-20 rounded-full bg-primary/10 border-2 border-primary/50 flex items-center justify-center mb-4 overflow-hidden relative shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.3)]">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20"></div>
               <Code2 className="size-8 text-primary relative z-10" />
             </div>

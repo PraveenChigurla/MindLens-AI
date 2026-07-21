@@ -140,7 +140,7 @@ export default function SinglePrediction() {
               <Button 
                 onClick={handlePredict} 
                 disabled={loading || !text.trim() || charCount > 5000}
-                className="w-full mt-6 shadow-[0_0_15px_rgba(139,92,246,0.3)] h-12"
+                className="w-full mt-6 shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.3)] h-12"
               >
                 {loading ? "Processing..." : <><BrainCircuit className="size-4 mr-2" /> Analyze Text</>}
               </Button>
@@ -169,7 +169,7 @@ export default function SinglePrediction() {
               </CardContent>
             </Card>
           ) : result ? (
-            <Card className="glass h-full border-primary/20 shadow-[0_0_30px_rgba(139,92,246,0.1)] transition-all animate-in zoom-in-95 duration-500">
+            <Card className="glass h-full border-primary/20 shadow-md dark:shadow-[0_0_30px_rgba(139,92,246,0.1)] transition-all animate-in zoom-in-95 duration-500">
               <CardHeader className="border-b border-border/50 pb-4">
                 <div className="flex items-start justify-between">
                   <div>
@@ -183,7 +183,7 @@ export default function SinglePrediction() {
                     {/* SVG Circle Gauge representation */}
                     <svg className="absolute inset-0 w-full h-full -rotate-90">
                       <circle cx="28" cy="28" r="26" fill="none" strokeWidth="4" className="stroke-border" />
-                      <circle cx="28" cy="28" r="26" fill="none" strokeWidth="4" className="stroke-primary shadow-[0_0_10px_rgba(139,92,246,0.5)] transition-all duration-1000 ease-out" strokeDasharray={`${(result.confidence * 163.36).toFixed(2)} 163.36`} />
+                      <circle cx="28" cy="28" r="26" fill="none" strokeWidth="4" className="stroke-primary shadow-sm dark:shadow-[0_0_10px_rgba(139,92,246,0.5)] transition-all duration-1000 ease-out" strokeDasharray={`${(result.confidence * 163.36).toFixed(2)} 163.36`} />
                     </svg>
                     <span className="font-bold text-sm">{(result.confidence * 100).toFixed(0)}%</span>
                   </div>
@@ -206,7 +206,7 @@ export default function SinglePrediction() {
                         <RechartsTooltip cursor={{fill: 'rgba(255,255,255,0.05)'}} contentStyle={{backgroundColor: '#09090e', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '8px'}} itemStyle={{color: '#e2e8f0'}} />
                         <Bar dataKey="value" radius={[4, 4, 0, 0]}>
                           {chartData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={index === 0 ? '#8b5cf6' : 'rgba(139, 92, 246, 0.3)'} />
+                            <Cell key={`cell-${index}`} fill={index === 0 ? 'var(--color-primary)' : 'var(--color-accent)'} />
                           ))}
                         </Bar>
                       </BarChart>

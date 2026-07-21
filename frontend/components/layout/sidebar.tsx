@@ -57,7 +57,7 @@ export function Sidebar() {
               className={cn(
                 "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
                 isActive 
-                  ? "bg-primary/15 text-primary shadow-[0_0_15px_rgba(139,92,246,0.15)] border border-primary/20" 
+                  ? "bg-primary/15 text-primary shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.15)] border border-primary/20" 
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
               )}
             >

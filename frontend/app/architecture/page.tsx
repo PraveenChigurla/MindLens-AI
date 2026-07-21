@@ -12,7 +12,7 @@ export default function Architecture() {
       <div className="relative py-12">
         {/* Connection lines for desktop */}
         <div className="absolute top-1/2 left-[20%] right-[20%] h-1 bg-gradient-to-r from-primary/20 via-primary/50 to-primary/20 -translate-y-1/2 hidden lg:block rounded-full">
-          <div className="absolute top-0 left-0 h-full w-1/3 bg-primary animate-[pulse_2s_ease-in-out_infinite]" style={{boxShadow: '0 0 10px #8b5cf6'}}></div>
+          <div className="absolute top-0 left-0 h-full w-1/3 bg-primary animate-[pulse_2s_ease-in-out_infinite]" style={{boxShadow: '0 0 10px var(--color-primary)'}}></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">

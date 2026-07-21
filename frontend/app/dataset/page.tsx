@@ -7,7 +7,7 @@ import { BarChart, Bar, PieChart as RechartsPieChart, Pie, XAxis, YAxis, Tooltip
 
 export default function DatasetEDA() {
   const classDistribution = [
-    { name: 'Depression', value: 15000, color: '#8b5cf6' },
+    { name: 'Depression', value: 15000, color: 'var(--color-primary)' },
     { name: 'Stress', value: 12000, color: '#3b82f6' },
     { name: 'Anxiety', value: 10000, color: '#0ea5e9' },
     { name: 'Normal', value: 8000, color: '#22c55e' },

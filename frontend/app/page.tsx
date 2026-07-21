@@ -61,7 +61,7 @@ export default function Dashboard() {
         {/* Animated Neural Network Hero Graphic */}
         <div className="hidden md:flex w-1/3 justify-end relative h-32 items-center">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/5 blur-xl"></div>
-          <svg viewBox="0 0 200 100" className="w-full h-full text-primary/40 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+          <svg viewBox="0 0 200 100" className="w-full h-full text-primary/40 drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
             <g className="animate-pulse" style={{ animationDuration: '3s' }}>
               <circle cx="20" cy="20" r="4" fill="currentColor" />
               <circle cx="20" cy="50" r="4" fill="currentColor" />
@@ -70,10 +70,10 @@ export default function Dashboard() {
               <circle cx="100" cy="30" r="5" fill="currentColor" />
               <circle cx="100" cy="70" r="5" fill="currentColor" />
               
-              <circle cx="180" cy="50" r="6" fill="#8b5cf6" className="animate-pulse" style={{ animationDuration: '1.5s' }} />
+              <circle cx="180" cy="50" r="6" fill="var(--color-primary)" className="animate-pulse" style={{ animationDuration: '1.5s' }} />
 
               <path d="M24 20 L96 30 M24 20 L96 70 M24 50 L96 30 M24 50 L96 70 M24 80 L96 30 M24 80 L96 70" stroke="currentColor" strokeWidth="1" strokeDasharray="4 2" />
-              <path d="M104 30 L174 50 M104 70 L174 50" stroke="#8b5cf6" strokeWidth="2" />
+              <path d="M104 30 L174 50 M104 70 L174 50" stroke="var(--color-primary)" strokeWidth="2" />
             </g>
           </svg>
         </div>
@@ -87,7 +87,7 @@ export default function Dashboard() {
               <Brain className="size-24 text-primary" />
             </div>
             <CardHeader>
-              <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+              <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center mb-2 shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.3)]">
                 <BrainCircuit className="size-6 text-primary" />
               </div>
               <CardTitle className="text-xl group-hover:text-primary transition-colors">Single Prediction</CardTitle>
@@ -234,7 +234,7 @@ export default function Dashboard() {
             <div className="h-[50px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={miniLatency}>
-                  <Line type="monotone" dataKey="val" stroke="#8b5cf6" strokeWidth={2} dot={false} isAnimationActive={true} />
+                  <Line type="monotone" dataKey="val" stroke="var(--color-primary)" strokeWidth={2} dot={false} isAnimationActive={true} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -298,7 +298,7 @@ export default function Dashboard() {
                 <div className="absolute -right-6 top-1/2 -translate-y-1/2 hidden md:block text-primary animate-[pulse-fade_3s_ease-in-out_infinite] delay-1000">→</div>
               </div>
               
-              <div className="bg-primary/10 border border-primary/50 rounded-lg p-3 md:mx-4 shadow-[0_0_20px_rgba(139,92,246,0.15)] flex flex-col items-center gap-2 relative transform transition-transform hover:scale-105">
+              <div className="bg-primary/10 border border-primary/50 rounded-lg p-3 md:mx-4 shadow-sm dark:shadow-[0_0_20px_rgba(139,92,246,0.15)] flex flex-col items-center gap-2 relative transform transition-transform hover:scale-105">
                 <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center"><BrainCircuit className="size-4 text-primary" /></div>
                 <span className="font-bold text-primary">DistilBERT</span>
                 <div className="absolute -right-6 top-1/2 -translate-y-1/2 hidden md:block text-primary animate-[pulse-fade_3s_ease-in-out_infinite] delay-1500">→</div>
@@ -318,7 +318,7 @@ export default function Dashboard() {
               }
               @keyframes pulse-fade {
                 0%, 100% { opacity: 0.2; transform: scale(1) translateY(-50%); }
-                50% { opacity: 1; transform: scale(1.5) translateY(-30%); text-shadow: 0 0 10px rgba(139,92,246,0.8); }
+                50% { opacity: 1; transform: scale(1.5) translateY(-30%); text-shadow: 0 0 10px var(--color-primary); }
               }
               .delay-0 { animation-delay: 0s; }
               .delay-500 { animation-delay: 0.6s; }

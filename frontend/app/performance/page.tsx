@@ -130,7 +130,7 @@ export default function ModelPerformance() {
                     contentStyle={{backgroundColor: '#09090e', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '8px'}} 
                   />
                   <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '12px' }}/>
-                  <Line type="monotone" dataKey="training_loss" name="Training Loss" stroke="#8b5cf6" strokeWidth={3} dot={{ r: 4, fill: '#8b5cf6' }} />
+                  <Line type="monotone" dataKey="training_loss" name="Training Loss" stroke="var(--color-primary)" strokeWidth={3} dot={{ r: 4, fill: 'var(--color-primary)' }} />
                   <Line type="monotone" dataKey="validation_loss" name="Validation Loss" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4, fill: '#3b82f6' }} />
                 </LineChart>
               </ResponsiveContainer>

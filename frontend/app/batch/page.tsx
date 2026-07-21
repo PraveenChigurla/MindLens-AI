@@ -178,12 +178,12 @@ export default function BatchPrediction() {
 
                     <div className="flex gap-3">
                       {!processing && progress < 100 && (
-                        <Button onClick={runBatchPrediction} className="flex-1 shadow-[0_0_15px_rgba(139,92,246,0.3)] h-12">
+                        <Button onClick={runBatchPrediction} className="flex-1 shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.3)] h-12">
                           <Play className="size-4 mr-2" /> Start Processing
                         </Button>
                       )}
                       {processing && (
-                        <Button disabled className="flex-1 bg-primary/30 text-primary-foreground h-12 border border-primary/50 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+                        <Button disabled className="flex-1 bg-primary/30 text-primary-foreground h-12 border border-primary/50 shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.2)]">
                           <Loader2 className="size-4 mr-2 animate-spin" /> Processing... ({results.length}/{data.length})
                         </Button>
                       )}
