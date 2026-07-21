@@ -30,8 +30,8 @@ export default function SinglePrediction() {
     try {
       setTimeout(() => setLoadingStep(2), 600) // Running Model
       setTimeout(() => setLoadingStep(3), 1200) // Generating Output
-      
-      const res = await fetch('/api/predict', {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://mindlens-backend-3a8f.onrender.com"
+      const res = await fetch(`${API_URL}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text })

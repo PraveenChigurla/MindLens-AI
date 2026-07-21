@@ -14,9 +14,10 @@ export default function APIStatus() {
   const checkStatus = async () => {
     setLoading(true)
     try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://mindlens-backend-3a8f.onrender.com"
       const [healthRes, rootRes] = await Promise.all([
-        fetch('/health').catch(() => null),
-        fetch('/api/').catch(() => null)
+        fetch(`${API_URL}/health`).catch(() => null),
+        fetch(`${API_URL}/`).catch(() => null)
       ])
 
       if (healthRes?.ok) {

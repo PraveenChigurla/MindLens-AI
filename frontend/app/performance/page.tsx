@@ -13,7 +13,8 @@ export default function ModelPerformance() {
   useEffect(() => {
     async function fetchMetrics() {
       try {
-        const res = await fetch('/metrics')
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://mindlens-backend-3a8f.onrender.com"
+        const res = await fetch(`${API_URL}/metrics`)
         if (res.ok) {
           const data = await res.json()
           setMetrics(data)
