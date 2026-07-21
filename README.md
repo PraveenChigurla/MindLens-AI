@@ -9,9 +9,13 @@ The project features a highly optimized PyTorch/FastAPI backend and a sleek, int
 - **Frontend Dashboard:** [https://mindlens-frontend.onrender.com](https://mindlens-frontend.onrender.com)
 - **Backend API:** [https://mindlens-backend-3a8f.onrender.com](https://mindlens-backend-3a8f.onrender.com)
 
-## 👤 Developer
+## 👥 Developers
 **Praveen Chigurla**  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/PraveenChigurla)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/praveen-chigurla/)
+
+**Khushi Kore** (Partner)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/khushikore)
 
 ---
 
