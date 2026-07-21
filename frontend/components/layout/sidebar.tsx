@@ -16,7 +16,7 @@ import {
   FlaskConical
 } from "lucide-react"
 
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   { name: "Dashboard", href: "/", icon: Home },
   { name: "Single Prediction", href: "/predict", icon: MessageSquareText },
   { name: "Batch Prediction", href: "/batch", icon: Layers },
