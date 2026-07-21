@@ -34,14 +34,14 @@
 @layer base {
   :root {
     /* LIGHT THEME (Default) */
-    --color-background: #FAFAF6;
-    --color-foreground: #1F2937;
+    --color-background: #F9FBF7;
+    --color-foreground: #2C3327;
     
-    --color-card: #F0F5EB;
-    --color-card-foreground: #1F2937;
+    --color-card: #F2F7EC;
+    --color-card-foreground: #2C3327;
     
-    --color-border: #DDE2D2;
-    --color-input: #F4F5EF;
+    --color-border: rgba(85, 107, 47, 0.15);
+    --color-input: #E8EDE1;
     
     /* Olive Green Primary */
     --color-primary: #556B2F;
@@ -51,14 +51,14 @@
     --color-secondary: #6B8E23;
     --color-secondary-foreground: #FFFFFF;
     
-    --color-accent: #EEF4E6;
+    --color-accent: #E8EDE1;
     --color-accent-foreground: #556B2F;
     
     --color-destructive: #ef4444;
     --color-destructive-foreground: #ffffff;
     
-    --color-muted: #F4F5EF;
-    --color-muted-foreground: #6B7280;
+    --color-muted: #E8EDE1;
+    --color-muted-foreground: #5A6652;
   }
   
   .dark {
@@ -119,8 +119,8 @@
   }
   
   :root:not(.dark) .glass {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px -10px rgba(85, 107, 47, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-xl);
   }
   
   .glass-hover {
@@ -134,8 +134,8 @@
   }
 
   :root:not(.dark) .glass-hover:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    border-color: var(--color-primary);
+    box-shadow: 0 15px 45px -10px rgba(85, 107, 47, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(85, 107, 47, 0.3);
     transform: translateY(-2px);
   }
 
