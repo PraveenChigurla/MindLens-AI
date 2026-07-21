@@ -31,8 +31,7 @@ export default function SinglePrediction() {
       setTimeout(() => setLoadingStep(2), 600) // Running Model
       setTimeout(() => setLoadingStep(3), 1200) // Generating Output
       
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
-      const res = await fetch(`${API_URL}/predict`, {
+      const res = await fetch('/api/predict', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text })
