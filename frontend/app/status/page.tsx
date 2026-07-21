@@ -14,9 +14,10 @@ export default function APIStatus() {
   const checkStatus = async () => {
     setLoading(true)
     try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
       const [healthRes, versionRes] = await Promise.all([
-        fetch("http://localhost:8000/health").catch(() => null),
-        fetch("http://localhost:8000/").catch(() => null)
+        fetch(`${API_URL}/health`).catch(() => null),
+        fetch(`${API_URL}/`).catch(() => null)
       ])
 
       if (healthRes?.ok) {

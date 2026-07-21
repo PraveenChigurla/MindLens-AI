@@ -13,7 +13,8 @@ export default function ModelPerformance() {
   useEffect(() => {
     async function fetchMetrics() {
       try {
-        const res = await fetch("http://localhost:8000/metrics")
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
+        const res = await fetch(`${API_URL}/metrics`)
         if (res.ok) {
           const data = await res.json()
           setMetrics(data)
