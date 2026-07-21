@@ -9,6 +9,10 @@ The project features a highly optimized PyTorch/FastAPI backend and a sleek, int
 - **Frontend Dashboard:** [https://mindlens-frontend.onrender.com](https://mindlens-frontend.onrender.com)
 - **Backend API:** [https://mindlens-backend-3a8f.onrender.com](https://mindlens-backend-3a8f.onrender.com)
 
+## 👤 Developer
+**Praveen Chigurla**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/praveen-chigurla/)
+
 ---
 
 ## 📊 Dataset & Exploratory Data Analysis (EDA)

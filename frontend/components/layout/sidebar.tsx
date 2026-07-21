@@ -72,8 +72,8 @@ export function Sidebar() {
         <div className="text-xs text-muted-foreground text-center space-y-1">
           <p>© 2026 MindLens AI</p>
           <div className="flex justify-center gap-3 mt-2">
-            <a href="#" className="hover:text-primary transition-colors">GitHub</a>
-            <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://github.com/PraveenChigurla/MindLens-AI" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/praveen-chigurla/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
           </div>
         </div>
       </div>
