@@ -108,7 +108,7 @@ export default function SinglePrediction() {
               <div className="mt-5 pt-4 border-t border-border/40">
                 <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-2 font-medium">Load Sample for Class:</p>
                 <div className="flex flex-wrap gap-2">
-                  [
+                  {[
                     { label: "Normal", text: "I want to spend a lot of time shopping for snacks for Eid but I have 2 million left, make a self-registration" },
                     { label: "Depression", text: "I recently went through a breakup and she said she still wants to be friends. I just want to lose feelings so all this pain can stop it hurts so much and I cannot even cry about it. I wish we never met it would be much less painful." },
                     { label: "Anxiety", text: "sometimes what is needed when there is a problem is to laugh until you forget that there is a problem, when you remember it, you feel restless like that well, it turns out that I still have a sad burden" },
