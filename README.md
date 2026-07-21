@@ -16,13 +16,13 @@ The project features a highly optimized PyTorch/FastAPI backend and a sleek, int
 The model is trained on a curated mental health dataset consisting of **51,093** text samples.
 
 **Classes Detected (7):**
-- Anxiety
-- Bipolar
-- Depression
-- Normal
-- Personality disorder
-- Stress
-- Suicidal
+- **Normal**: 30.83%
+- **Depression**: 29.04%
+- **Suicidal**: 20.08%
+- **Anxiety**: 7.33%
+- **Bipolar**: 5.42%
+- **Stress**: 5.03%
+- **Personality disorder**: 2.26%
 
 ### EDA Highlights:
 - **Class Distribution:** The dataset contains a diverse spread across all 7 classes, ensuring the model does not become overly biased towards one specific mental state.
