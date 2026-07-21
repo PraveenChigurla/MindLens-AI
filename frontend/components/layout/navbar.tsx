@@ -22,8 +22,8 @@ export function Navbar() {
     async function checkHealth() {
       try {
         const start = performance.now()
-        // Fetch from proxy instead of hardcoded localhost so it works in production
-        const res = await fetch("/health")
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://mindlens-backend-3a8f.onrender.com"
+        const res = await fetch(`${API_URL}/health`)
         const end = performance.now()
         if (res.ok) {
           setStatus("Online")
