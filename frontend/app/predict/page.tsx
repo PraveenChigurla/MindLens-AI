@@ -108,14 +108,14 @@ export default function SinglePrediction() {
               <div className="mt-5 pt-4 border-t border-border/40">
                 <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-2 font-medium">Load Sample for Class:</p>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { label: "Normal", text: "I had a great day today! Went for a walk with friends and enjoyed the nice weather." },
-                    { label: "Depression", text: "I feel completely empty and hopeless. I don't enjoy the things I used to, and getting out of bed feels impossible." },
-                    { label: "Anxiety", text: "My heart is constantly racing and my chest is tight. I can't stop overthinking every little thing that might go wrong." },
-                    { label: "Stress", text: "I am so overwhelmed with all these deadlines and responsibilities. I haven't slept properly in days trying to keep up." },
-                    { label: "Suicidal", text: "I just can't take this pain anymore. I want it all to end and I don't see any other way out." },
-                    { label: "Bipolar", text: "Last week I felt invincible and didn't sleep for three days working on projects, but now I crashed and feel utterly worthless." },
-                    { label: "Personality disorder", text: "My relationships are so intense and unstable. I constantly fear being abandoned, and I feel completely empty inside." }
+                  [
+                    { label: "Normal", text: "I want to spend a lot of time shopping for snacks for Eid but I have 2 million left, make a self-registration" },
+                    { label: "Depression", text: "I recently went through a breakup and she said she still wants to be friends. I just want to lose feelings so all this pain can stop it hurts so much and I cannot even cry about it. I wish we never met it would be much less painful." },
+                    { label: "Anxiety", text: "sometimes what is needed when there is a problem is to laugh until you forget that there is a problem, when you remember it, you feel restless like that well, it turns out that I still have a sad burden" },
+                    { label: "Stress", text: "I decided to look up 'feelings of doom' in hopes of maybe getting sucked into some rabbit hole... So on top of my 'doom' to my gloom, I am now f'n worried about my heart. I do happen to have a physical in 48 hours." },
+                    { label: "Suicidal", text: "I am so exhausted of this. Just when I think I can finally rest, another hurdle comes flying at me... it is like life is trying to get me to kill myself and honestly I think I would be better off dead." },
+                    { label: "Bipolar", text: "Last week I felt invincible and didn't sleep for three days working on projects, but now I crashed and feel utterly worthless. I've been doing amazingly well on lamictal though." },
+                    { label: "Personality disorder", text: "We created a Telegram group/room for people with AvPD (Avoidant Personality Disorder) who want to talk to other people with AvPD, to break the loneliness, pass the time, make friends or just lurk." }
                   ].map((sample) => (
                     <Badge 
                       key={sample.label} 
