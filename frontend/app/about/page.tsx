@@ -28,14 +28,17 @@ export default function About() {
           </CardContent>
         </Card>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
+          <div className="text-center border-b border-border/40 pb-2 mb-2">
+            <h3 className="font-bold text-xl text-foreground tracking-wide">Developed By</h3>
+          </div>
+
           <Card className="glass flex flex-col items-center justify-center text-center p-6 border-primary/20 hover:border-primary/50 transition-colors">
             <div className="size-20 rounded-full bg-primary/10 border-2 border-primary/50 flex items-center justify-center mb-4 overflow-hidden relative shadow-sm dark:shadow-[0_0_15px_rgba(139,92,246,0.3)]">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20"></div>
               <Code2 className="size-8 text-primary relative z-10" />
             </div>
-            <h3 className="font-bold text-lg text-foreground">Developed By</h3>
-            <p className="text-primary font-medium mb-4 text-glow">Praveen Chigurla</p>
+            <h4 className="font-bold text-lg text-primary mb-4 text-glow">Praveen Chigurla</h4>
             
             <div className="flex gap-4 mt-auto">
               <Link href="https://github.com/PraveenChigurla" target="_blank" title="GitHub" className="p-2.5 bg-muted/20 hover:bg-muted/40 hover:text-primary rounded-full transition-colors border border-border/50">
@@ -52,12 +55,14 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-bl from-primary to-secondary opacity-20"></div>
               <Code2 className="size-8 text-secondary relative z-10" />
             </div>
-            <h3 className="font-bold text-lg text-foreground">Partner</h3>
-            <p className="text-secondary font-medium mb-4 text-glow">Khushi Kore</p>
+            <h4 className="font-bold text-lg text-secondary mb-4 text-glow">Khushi Kore</h4>
             
             <div className="flex gap-4 mt-auto">
               <Link href="https://github.com/khushikore" target="_blank" title="GitHub" className="p-2.5 bg-muted/20 hover:bg-muted/40 hover:text-secondary rounded-full transition-colors border border-border/50">
                 <Terminal className="size-5" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/khushi-kore/" target="_blank" title="LinkedIn" className="p-2.5 bg-muted/20 hover:bg-muted/40 hover:text-secondary rounded-full transition-colors border border-border/50">
+                <User className="size-5" />
               </Link>
             </div>
           </Card>
